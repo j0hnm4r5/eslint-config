@@ -1,23 +1,23 @@
 {
-  "name": "@j0hnm4r5/eslint-config",
-  "version": "1.0.7",
-  "main": "index.js",
-  "author": "John Mars",
-  "license": "MIT",
-  "keywords": [
-    "eslint",
-    "eslintconfig"
-  ],
-  "dependencies": {
-    "eslint": ">=6.5.0",
-    "eslint-config-airbnb": ">=18.0.0",
-    "eslint-config-prettier": ">=6.4.0",
-    "eslint-plugin-import": ">=2.18.0",
-    "eslint-plugin-jsx-a11y": ">=6.2.0",
-    "eslint-plugin-prettier": ">=3.1.0",
-    "eslint-plugin-react": ">=7.14.0",
-    "eslint-plugin-react-hooks": ">=1.7.0",
-    "eslint-plugin-unicorn": ">=12.1.0",
-    "prettier": ">=1.18.0"
-  }
+	"name": "@j0hnm4r5/eslint-config",
+	"version": "1.0.11",
+	"main": "index.js",
+	"author": "John Mars",
+	"license": "MIT",
+	"keywords": [
+		"eslint",
+		"eslintconfig"
+	],
+	"dependencies": {
+		"eslint": ">=6.5.0",
+		"eslint-config-airbnb": ">=18.0.0",
+		"eslint-config-prettier": ">=6.4.0",
+		"eslint-plugin-import": ">=2.18.0",
+		"eslint-plugin-jsx-a11y": ">=6.2.0",
+		"eslint-plugin-prettier": ">=3.1.0",
+		"eslint-plugin-react": ">=7.14.0",
+		"eslint-plugin-react-hooks": ">=1.7.0",
+		"eslint-plugin-unicorn": ">=12.1.0",
+		"prettier": ">=1.18.0"
+	}
 }
