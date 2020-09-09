@@ -1,6 +1,6 @@
 {
 	"name": "@j0hnm4r5/eslint-config",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"main": "index.js",
 	"author": "John Mars",
 	"license": "MIT",
