@@ -23,7 +23,7 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 ## Example
 
 **.eslintrc**
-```json
+```js
 {
   "env": {
 		// all available options: https://eslint.org/docs/user-guide/configuring#specifying-environments
