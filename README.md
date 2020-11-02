@@ -35,10 +35,10 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 		"es2020": true, // adds all ECMAScript 2020 globals and automatically sets the ecmaVersion parser option to 11
 		// "es2021": true, // adds all ECMAScript 2021 globals and automatically sets the ecmaVersion parser option to 12
 
-  },
-  "extends": [
-    "@j0hnm4r5/eslint-config"
-  ]
+	},
+	"extends": [
+		"@j0hnm4r5/eslint-config"
+	]
 }
 ```
 
@@ -47,14 +47,14 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 **.prettierrc**
 ```json
 {
-  "printWidth": 68,
-  "tabWidth": 2,
-  "useTabs": true,
-  "semicolons": true,
-  "singleQuote": false,
+	"printWidth": 68,
+	"tabWidth": 2,
+	"useTabs": true,
+	"semicolons": true,
+	"singleQuote": false,
 	"quoteProps": "consistent",
 	"jsxSingleQuote": false,
-  "trailingComma": "es5",
+	"trailingComma": "es5",
 	"bracketSpacing": true,
 	"jsxBracketSameLine": false,
 	"arrowParens": "always"
