@@ -28,9 +28,9 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
   "env": {
 		// all available options: https://eslint.org/docs/user-guide/configuring#specifying-environments
 		// they're defined in: https://github.com/eslint/eslintrc/blob/main/conf/environments.js
-    "node": true, // Node.js global variables and Node.js scoping
-    "browser": true, // browser global variables
-    // "es6": true, // enable all ECMAScript 6 features except for modules and automatically sets the ecmaVersion parser option to 6
+		"node": true, // Node.js global variables and Node.js scoping
+		"browser": true, // browser global variables
+		// "es6": true, // enable all ECMAScript 6 features except for modules and automatically sets the ecmaVersion parser option to 6
 		// "es2017": true, // adds all ECMAScript 2017 globals and automatically sets the ecmaVersion parser option to 8
 		"es2020": true, // adds all ECMAScript 2020 globals and automatically sets the ecmaVersion parser option to 11
 		// "es2021": true, // adds all ECMAScript 2021 globals and automatically sets the ecmaVersion parser option to 12
