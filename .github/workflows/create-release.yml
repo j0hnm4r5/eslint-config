@@ -1,4 +1,4 @@
-name: Create Release
+name: Create Release & Publish Package
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Create Release
+    name: Create Release 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,3 +22,33 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+  
+  publish-npm:
+    name: Publish to NPM
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: yarn
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    name: Publish to GitHub Packages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://npm.pkg.github.com/
+      - run: yarn
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
