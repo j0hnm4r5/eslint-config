@@ -1,0 +1,35 @@
+name: Publish Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+
+  publish-npm:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: yarn version --new-version "${GITHUB_REF:11}" --no-git-tag-version
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    name: Publish to GitHub Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://npm.pkg.github.com/
+      - run: yarn version --new-version "${GITHUB_REF:11}" --no-git-tag-version
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
