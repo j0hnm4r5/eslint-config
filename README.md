@@ -26,13 +26,13 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 ```js
 {
   "env": {
-		"node": true,
-		"browser": true,
-		"es2020": true,
-	},
-	"extends": [
-		"@j0hnm4r5/eslint-config"
-	]
+    "node": true,
+    "browser": true,
+    "es2020": true,
+  },
+  "extends": [
+    "@j0hnm4r5/eslint-config"
+  ]
 }
 ```
 
@@ -41,17 +41,17 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 **.prettierrc**
 ```json
 {
-	"printWidth": 68,
-	"tabWidth": 2,
-	"useTabs": true,
-	"semicolons": true,
-	"singleQuote": false,
-	"quoteProps": "consistent",
-	"jsxSingleQuote": false,
-	"trailingComma": "es5",
-	"bracketSpacing": true,
-	"jsxBracketSameLine": false,
-	"arrowParens": "always"
+  "printWidth": 68,
+  "tabWidth": 2,
+  "useTabs": true,
+  "semicolons": true,
+  "singleQuote": false,
+  "quoteProps": "consistent",
+  "jsxSingleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always"
 }
 ```
 
