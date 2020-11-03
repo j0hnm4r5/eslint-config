@@ -1,5 +1,9 @@
 {
 	"extends": [
-		"../../configs/reactTS.js"
-	]
+		"../../configs/ts-react.js"
+	],
+	"parserOptions": {
+		"tsconfigRootDir": "./tests/typescript-react/",
+		"project": "./tsconfig.json"
+	}
 }

@@ -1,5 +1,10 @@
 module.exports = {
-	extends: [`plugin:react/recommended`, `prettier/react`],
+	extends: [
+		`airbnb/hooks`,
+		`plugin:react/recommended`,
+		`prettier/react`,
+	],
+	plugins: [`react`],
 	rules: {
 		// "jsx-a11y/click-events-have-key-events": `off`,
 		// "jsx-a11y/media-has-caption": `off`,
@@ -9,5 +14,4 @@ module.exports = {
 		"react/no-array-index-key": `off`,
 		"react/prop-types": `off`,
 	},
-	plugins: [`react`],
 };

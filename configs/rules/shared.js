@@ -1,15 +1,32 @@
 module.exports = {
 	extends: [
-		`plugin:sonarjs/recommended`,
+		`plugin:promise/recommended`,
+		// `plugin:sonarjs/recommended`,
+		`plugin:eslint-comments/recommended`,
 		`plugin:unicorn/recommended`,
 		`plugin:prettier/recommended`,
 		`prettier/unicorn`,
 	],
-	plugins: [`unicorn`, `no-secrets`, `sonarjs`],
+	plugins: [
+		`unicorn`,
+		`no-secrets`,
+		// `sonarjs`,
+		`promise`,
+		`eslint-comments`,
+	],
 	rules: {
 		"consistent-return": `off`,
 		"import/first": `off`,
 		"import/newline-after-import": `off`,
+		"import/prefer-default-export": `off`,
+		"import/no-anonymous-default-export": [
+			`error`,
+			{
+				allowArrowFunction: false,
+				allowAnonymousClass: false,
+				allowAnonymousFunction: false,
+			},
+		],
 		"no-bitwise": `off`,
 		"no-console": `off`,
 		"no-plusplus": `off`,
@@ -22,5 +39,6 @@ module.exports = {
 		"radix": [`error`, `as-needed`],
 		"unicorn/filename-case": `off`,
 		"unicorn/no-nested-ternary": `off`,
+		"unicorn/prevent-abbreviations": `off`,
 	},
 };

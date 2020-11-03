@@ -7,7 +7,8 @@ module.exports = {
 		`airbnb-typescript`,
 		...shared.extends,
 		...react.extends,
+		...ts.extends,
 	],
-	plugins: [...react.plugins, ...ts.plugins, ...shared.plugins],
-	rules: { ...shared.rules, ...ts.rules, ...react.rules },
+	plugins: [...shared.plugins, ...react.plugins, ...ts.plugins],
+	rules: { ...shared.rules, ...react.rules, ...ts.rules },
 };
