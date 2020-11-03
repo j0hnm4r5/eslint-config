@@ -9,7 +9,7 @@
   "eslintconfig"
  ],
  "dependencies": {
-  "@typescript-eslint/eslint-plugin": "^4.6.0",
+  "@typescript-eslint/eslint-plugin": "^4.6.1",
   "eslint": "^7.2.0",
   "eslint-config-airbnb": ">=18.0.0",
   "eslint-config-airbnb-base": "^14.2.0",
