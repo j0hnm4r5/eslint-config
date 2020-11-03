@@ -1,5 +1,10 @@
 # @j0hnm4r5/eslint-config
 
+[![GitHub Release](https://img.shields.io/github/v/release/j0hnm4r5/eslint-config.svg?style=flat)](https://github.com/j0hnm4r5/eslint-config/releases)
+![NPM Downloads](https://img.shields.io/npm/dw/@j0hnm4r5/eslint-config?style=flat)
+![GitHub Build](https://img.shields.io/github/workflow/status/j0hnm4r5/eslint-config/Publish%20Package?style=flat)
+
+
 ## About
 
 This [ESLint](https://eslint.org/) config is built on top of [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb) and [Unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn). It includes [Prettier](https://prettier.io/) to automatically format code.
@@ -20,10 +25,15 @@ This [ESLint](https://eslint.org/) config is built on top of [Airbnb's config](h
 
 That's it! All of the extended configs, Prettier, and some extra rule changes should just work out of the box.
 
-## Example
+---
+
+## Example Usage
+
+This should change depending on the project, but here's what I like to use as a baseline:
 
 **.eslintrc**
 ```js
+// .eslintrc
 {
   "env": {
     "node": true,
@@ -32,16 +42,54 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
   },
   "extends": [
     "@j0hnm4r5/eslint-config"
-  ]
+  ],
 }
 ```
 
-### And don't forget to include Prettier configs!
+---
+
+### Typescript
+
+If you're using TypeScript, add this to your `.eslintrc` too:
+
+```js
+// inside .eslintrc root object
+"parserOptions": {
+	"project": "./tsconfig.json"
+}
+```
+
+As well as a **tsconfig.json** file at the root of the project:
+
+**Node**
+
+```js
+// tsconfig.json
+{
+	"extends": "../../tsconfigs/node.json",
+}
+```
+
+**Browser**
+
+```js
+// tsconfig.json
+{
+	"extends": "../../tsconfigs/browser.json",
+}
+```
+
+---
+
+### Prettier
+
+And don't forget your Prettier configs! Here's what I use:
 
 **.prettierrc**
-```json
+```js
+// .prettierrc
 {
-  "printWidth": 68,
+  "printWidth": 62,
   "tabWidth": 2,
   "useTabs": true,
   "semicolons": true,
@@ -56,11 +104,13 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 ```
 
 **.prettierignore**
-```
-.cache
+```js
+// .prettierignore
 package.json
 package-lock.json
 yarn.lock
+node_modules
 public
+.cache
 ```
 
