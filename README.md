@@ -89,7 +89,7 @@ And don't forget your Prettier configs! Here's what I use:
 ```js
 // .prettierrc
 {
-  "printWidth": 62,
+  "printWidth": 62, // perfect size for my vscode window
   "tabWidth": 2,
   "useTabs": true,
   "semicolons": true,
@@ -104,8 +104,8 @@ And don't forget your Prettier configs! Here's what I use:
 ```
 
 **.prettierignore**
-```js
-// .prettierignore
+```sh
+# .prettierignore
 package.json
 package-lock.json
 yarn.lock
