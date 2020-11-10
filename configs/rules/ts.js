@@ -4,5 +4,10 @@ module.exports = {
 		`prettier/@typescript-eslint`,
 	],
 	plugins: [`@typescript-eslint`],
-	rules: {},
+	rules: {
+		"no-loop-func": `off`,
+		"no-redeclare": `off`,
+		"no-shadow": `off`,
+		"no-use-before-define": `off`,
+	},
 };
