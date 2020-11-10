@@ -1,3 +1,18 @@
 {
-	"extends": "../../tsconfigs/browser.json",
+  "compilerOptions": {
+    "lib": ["es2020", "dom"],
+    "module": "commonjs",
+		"target": "es6",
+		
+		"jsx": "react",
+		
+		"sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+	},
+	"exclude": [
+		"node_modules"
+	]
 }

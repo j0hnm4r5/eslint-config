@@ -18,9 +18,9 @@ This [ESLint](https://eslint.org/) config is built on top of [Airbnb's config](h
 |   |   |
 |---|---|
 | Vanilla (default): | `"@j0hnm4r5/eslint-config"` |
-| TypeScript without React : | `"@j0hnm4r5/eslint-config/ts"` |
-| React: | `"@j0hnm4r5/eslint-config/react"` |
-| TypeScript with React: | `"@j0hnm4r5/eslint-config/ts-react"` |
+| TypeScript without React : | `"@j0hnm4r5/eslint-config/configs/ts"` |
+| React: | `"@j0hnm4r5/eslint-config/configs/react"` |
+| TypeScript with React: | `"@j0hnm4r5/eslint-config/configs/ts-react"` |
 
 
 That's it! All of the extended configs, Prettier, and some extra rule changes should just work out of the box.
@@ -66,7 +66,20 @@ As well as a **tsconfig.json** file at the root of the project:
 ```js
 // tsconfig.json
 {
-	"extends": "../../tsconfigs/node.json",
+  "compilerOptions": {
+    "lib": ["es2020"],
+    "module": "commonjs",
+		"target": "es2020",
+		
+		"sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+	},
+	"exclude": [
+		"node_modules"
+	]
 }
 ```
 
@@ -75,7 +88,22 @@ As well as a **tsconfig.json** file at the root of the project:
 ```js
 // tsconfig.json
 {
-	"extends": "../../tsconfigs/browser.json",
+  "compilerOptions": {
+    "lib": ["es2020", "dom"],
+    "module": "commonjs",
+		"target": "es6",
+		
+		"jsx": "react",
+		
+		"sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+	},
+	"exclude": [
+		"node_modules"
+	]
 }
 ```
 

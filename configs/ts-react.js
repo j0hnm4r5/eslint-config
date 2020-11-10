@@ -3,6 +3,7 @@ const react = require(`./rules/react`);
 const ts = require(`./rules/ts`);
 
 module.exports = {
+	parser: `@typescript-eslint/parser`,
 	extends: [
 		`airbnb-typescript`,
 		...shared.extends,
