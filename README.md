@@ -69,17 +69,17 @@ As well as a **tsconfig.json** file at the root of the project:
   "compilerOptions": {
     "lib": ["es2020"],
     "module": "commonjs",
-		"target": "es2020",
-		
-		"sourceMap": true,
+    "target": "es2020",
+
+    "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-	},
-	"exclude": [
-		"node_modules"
-	]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
 ```
 
@@ -91,19 +91,19 @@ As well as a **tsconfig.json** file at the root of the project:
   "compilerOptions": {
     "lib": ["es2020", "dom"],
     "module": "commonjs",
-		"target": "es6",
-		
-		"jsx": "react",
-		
-		"sourceMap": true,
+    "target": "es6",
+    
+    "jsx": "react",
+    
+    "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-	},
-	"exclude": [
-		"node_modules"
-	]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
 ```
 
