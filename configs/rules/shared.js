@@ -1,19 +1,12 @@
 module.exports = {
 	extends: [
 		`plugin:promise/recommended`,
-		// `plugin:sonarjs/recommended`,
 		`plugin:eslint-comments/recommended`,
 		`plugin:unicorn/recommended`,
 		`plugin:prettier/recommended`,
 		`prettier/unicorn`,
 	],
-	plugins: [
-		`unicorn`,
-		`no-secrets`,
-		// `sonarjs`,
-		`promise`,
-		`eslint-comments`,
-	],
+	plugins: [`unicorn`, `no-secrets`, `promise`, `eslint-comments`],
 	rules: {
 		"consistent-return": `off`,
 		"import/first": `off`,
@@ -22,9 +15,9 @@ module.exports = {
 		"import/no-anonymous-default-export": [
 			`error`,
 			{
-				allowArrowFunction: false,
-				allowAnonymousClass: false,
-				allowAnonymousFunction: false,
+				allowAnonymousClass: true,
+				allowAnonymousFunction: true,
+				allowArrowFunction: true,
 			},
 		],
 		"no-bitwise": `off`,
@@ -40,5 +33,6 @@ module.exports = {
 		"unicorn/filename-case": `off`,
 		"unicorn/no-nested-ternary": `off`,
 		"unicorn/prevent-abbreviations": `off`,
+		"eslint-comments/disable-enable-pair": `off`,
 	},
 };

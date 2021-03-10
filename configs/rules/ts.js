@@ -9,5 +9,7 @@ module.exports = {
 		"no-redeclare": `off`,
 		"no-shadow": `off`,
 		"no-use-before-define": `off`,
+		"quotes": `off`,
+		"@typescript-eslint/quotes": [`error`, `backtick`],
 	},
 };
