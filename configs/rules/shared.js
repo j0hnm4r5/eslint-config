@@ -4,7 +4,6 @@ module.exports = {
 		`plugin:eslint-comments/recommended`,
 		`plugin:unicorn/recommended`,
 		`plugin:prettier/recommended`,
-		`prettier/unicorn`,
 	],
 	plugins: [`unicorn`, `no-secrets`, `promise`, `eslint-comments`],
 	rules: {

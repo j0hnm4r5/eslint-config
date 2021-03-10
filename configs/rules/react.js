@@ -1,8 +1,7 @@
 module.exports = {
 	extends: [
 		`airbnb/hooks`,
-		`plugin:react/recommended`,
-		`prettier/react`,
+		`plugin:react/recommended`
 	],
 	plugins: [`react`],
 	rules: {
